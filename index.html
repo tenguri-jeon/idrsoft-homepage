@@ -7,6 +7,7 @@
     <title>IDRSOFT</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 <body>
     <!-- intro / main -->
@@ -21,24 +22,24 @@
                 </p>
             </div>
             <div class="planet-wrap">
-                <figure id="earth" > 
+                <figure id="earth" class="earth-intro" > 
                     <img src="img/earth-img.png" alt="지구">
                 </figure>
                 <div class="else-planet ">
-                    <figure class="moon moon-place">
+                    <figure class="moon moon-place display">
                         <img src="img/moon-img.png" alt="달">
                     </figure>
-                    <figure class="saturn saturn-place">
+                    <figure class="saturn saturn-place display">
                         <img src="img/saturn-img.png" alt="토성">
                     </figure>
                 </div>
             </div>
-            <div class="main-text">
+            <div class="main-text display">
                 <span>다양한 분야에서 전문성을 확보하고 있는 IT전문기업</span>
                 <hr class="main-hr">
                 <h2>무한한 상상을 실현하는 기업</h2>
             </div>
-        <div class="scroll-down">
+        <div class="scroll-down display">
             <span class="scroll-text" >Scroll</span>
             <div class="scroll-down-animation"></div>
         </div>
@@ -47,17 +48,17 @@
 
     <!-- idrsoft-introduce -->
     <section id="idrsoft-introduce">
-        <div class="idrsoft-introduce-text-wrap">
-            <div class="introduce-idrsoft">
-                <span class="introduce-sub-text">
+        <div class="idrsoft-introduce-text-wrap" >
+            <div class="introduce-idrsoft" data-scroll>
+                <span class="introduce-sub-text" data-scroll>
                     WE ARE
                 </span>
-                <h1>IDRSOFT</h1>
+                <h1 data-scroll>IDRSOFT</h1>
                 <figure class="idrsoft-logo">
                     <img src="img/idrsoft-logo.png" alt="idrsoft로고">
                 </figure>
             </div>
-            <div class="sub-introduce-text">
+            <div class="sub-introduce-text" data-scroll>
                 <p>저희 (주)아이디알소프트는 지속적인 기술개발과 축적된 노하우를 바탕으로 <br>
                     기초 개발기술, 사용자 경험과 빅데이터를 수집하고 활용하는 기술, 지으형 AI 서비스 기술 <br>
                     등 최신 IT기술 개발을 통하여 다양한 사용자 편의 및 핵심업무 솔루션을 개발 및 보급하고 있는 IT 전문 회사입니다.</p>
@@ -65,7 +66,7 @@
         </div>
 
         <!-- The work of idrsoft -->
-        <div class="work-of-idrsoft">
+        <div class="work-of-idrsoft"data-scroll >
             <div class="work-text">
                 <span class="white" >기술력 있는 탄탄한 기업!</span>
                 <p class="work-font">다양한 분야에 전문성을 확보하고 있는 IT 전문기업 <span class="orange-text">IDRSOFT</span> 를 소개합니다.</p>
@@ -148,8 +149,11 @@
             </div>
             <!-- slide //-->
 
-            <div class="earth-wrap">
-                <div class="button-wrap">
+            <div class="earth-wrap" >
+                <figure id="earth" data-scroll>
+                    <img src="img/earth-img.png" alt="지구">
+                </figure>
+                <div class="button-wrap"  >
                     <figure class="left-button">
                         <img src="img/left-button.png" alt="왼쪽버튼">
                     </figure>
@@ -159,7 +163,7 @@
                 </div>
             </div>
 
-            <figure class="cloud">
+            <figure class="cloud"  data-scroll>
                 <img src="img/cloud.png" alt="지구를 감싸고있는 구름">
             </figure>
 
@@ -167,7 +171,7 @@
         <!-- The work of idrsoft -->
 
         <!-- 아이디알소프트 스토리 -->
-        <div class="idrsoft-story">
+        <div class="idrsoft-story" data-scroll>
             <div class="story-wrap">
                 <div class="idrsoft-srory-text-wrap">
                     <p class="story-text">아이디알소프트 스토리</p>
@@ -245,14 +249,14 @@
     <section id="solution">
         <div class="openworks-container">
             <!-- 솔루션 오픈웍스 left-bar fixed -->
-            <div class="left-bar">
+            <div class="left-bar left-bar-ani">
                 <div class="solution-text-container">
                     <div class="solution-text-wrap">
-                        <div class="text-title-wrap">
+                        <div class="text-title-wrap" data-scroll>
                             <p>주요사업</p>
                             <span>솔루션 오픈웍스</span>
                         </div>
-                        <span class="solution-explane-text"> 귀사의 사업 가치와 수입체계를 <br>
+                        <span class="solution-explane-text" data-scroll> 귀사의 사업 가치와 수입체계를 <br>
                             어떻게, 얼마나 향상시킬까요?
                         </span>
                     </div>
@@ -276,10 +280,10 @@
             <div class="solution-slide-container">
                 <h5>OPEN WORKS</h5>
                 <div class="solution-slide">
-                    <ul class="solution-slde-wrap">
-                        <li>
+                    <ul class="solution-slde-wrap slider-container">
+                        <li class="slider-item">
                             <figure>
-                                <img src="#" alt="">
+                                <img src="img/solution01.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -288,9 +292,9 @@
                                 </span>
                             </div>
                         </li>
-                        <li>
+                        <li class="slider-item">
                             <figure>
-                                <img src="#" alt="">
+                                <img src="img/solution02.png" alt="솔루션 설명2">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -299,9 +303,9 @@
                                 </span>
                             </div>
                         </li>
-                        <li>
+                        <li class="slider-item">
                             <figure>
-                                <img src="#" alt="">
+                                <img src="img/solution03.png" alt="솔루션 설명3">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -310,9 +314,9 @@
                                 </span>
                             </div>
                         </li>
-                        <li>
+                        <li class="slider-item">
                             <figure>
-                                <img src="#" alt="">
+                                <img src="img/solution01.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -321,9 +325,9 @@
                                 </span>
                             </div>
                         </li>
-                        <li>
+                        <li class="slider-item">
                             <figure>
-                                <img src="#" alt="">
+                                <img src="img/solution02.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -371,10 +375,10 @@
             <div class="solution-slide-container">
                 <h5>OPEN WORKS</h5>
                 <div class="solution-slide">
-                    <ul class="solution-slde-wrap">
+                    <ul class="solution-slde-wrap slider-container">
                         <li>
-                            <figure>
-                                <img src="#" alt="">
+                            <figure class="slider-item">
+                                <img src="img/solution01.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -384,8 +388,8 @@
                             </div>
                         </li>
                         <li>
-                            <figure>
-                                <img src="#" alt="">
+                            <figure class="slider-item">
+                                <img src="img/solution02.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -395,8 +399,8 @@
                             </div>
                         </li>
                         <li>
-                            <figure>
-                                <img src="#" alt="">
+                            <figure class="slider-item">
+                                <img src="img/solution03.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -406,8 +410,8 @@
                             </div>
                         </li>
                         <li>
-                            <figure>
-                                <img src="#" alt="">
+                            <figure class="slider-item">
+                                <img src="img/solution01.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -417,8 +421,8 @@
                             </div>
                         </li>
                         <li>
-                            <figure>
-                                <img src="#" alt="">
+                            <figure class="slider-item">
+                                <img src="img/solution02.png" alt="솔루션 설명">
                             </figure>
                             <div class="solution-explane-text-wrap">
                                 <p>Type</p>
@@ -439,7 +443,7 @@
     <!-- logo -->
     <section id="logo">
         <div class="right-bar">
-            <div class="logo-text-wrap">
+            <div class="logo-text-wrap" data-scroll>
                 <h6>공공기관과 한국 기업들이 <br>
                     <span class="orange">
                         IDRSOFT
@@ -500,43 +504,43 @@
                     <li>
                         <div class="history-container">
                             <p> Expansion</p>
-                            <dl class="detail-hisroty-wrap">
-                                <dt>19.05월</dt>
-                                <dd>주식회사 아이디알소프트 설립</dd>
-                                <dt>20.02월</dt>
-                                <dd>제 21회 대한민국 인물대상 IT 부문 수상</dd>
-                            </dl>
+                            <div class="detail-hisroty-wrap">
+                                <span>19.05월</span>
+                                <span>주식회사 아이디알소프트 설립</span> <br>
+                                <span>20.02월</span>
+                                <span>제 21회 대한민국 인물대상 IT 부문 수상</span>
+                            </div>
                             <hr class="histroy-bar">
                         </div>
                     </li>
                     <li>
                         <div class="history-container">
                             <p> Development</p>
-                            <dl class="detail-hisroty-wrap">
-                                <dt>21.01월</dt>
-                                <dd>기업부설연구소 (제2021110324호) 인정 - <br>
-                                    한국산업기술진흥협회</dd>
-                                <dt>21.03월</dt>
-                                <dd>특허출원(요청 파라미터 변조의 위험을 탐지 및 <br>
-                                    모니터링)</dd>
-                                <dt>21.08월</dt>
-                                <dd>벤처기업인증 (혁심 성장유형)</dd>
-                            </dl>
+                            <div class="detail-hisroty-wrap">
+                                <span>21.01월</span>
+                                <span>기업부설연구소 (제2021110324호) 인정 - 
+                                    한국산업기술진흥협회</span> <br>
+                                <span>21.03월</span>
+                                <span>특허출원(요청 파라미터 변조의 위험을 탐지 및
+                                    모니터링)</span> <br>
+                                <span>21.08월</span>
+                                <span>벤처기업인증 (혁심 성장유형)</span>
+                            </div>
                             <hr class="histroy-bar">
                         </div>
                     </li>
                     <li>
                         <div class="history-container">
                             <p> Launch</p>
-                            <dl class="detail-hisroty-wrap">
-                                <dt>22.03월</dt>
-                                <dd>22년 기술평가우수기업 인증 (솔루션 개발 <br>
-                                    및 구축) - 나이스평가정보(주)</dd>
-                                <dt>22.06월</dt>
-                                <dd>특허 기술 이전 (네트워크 모니터링 도구)</dd>
-                                <dt>23.01월</dt>
-                                <dd>OPENWORKS / BLUEWORKS 공동소유권 협약</dd>
-                            </dl>
+                            <div class="detail-hisroty-wrap">
+                                <span>22.03월</span>
+                                <span>22년 기술평가우수기업 인증 (솔루션 개발 <br>
+                                    및 구축) - 나이스평가정보(주)</span>
+                                <span>22.06월</span>
+                                <span>특허 기술 이전 (네트워크 모니터링 도구)</span> <br>
+                                <span>23.01월</span>
+                                <span>OPENWORKS / BLUEWORKS 공동소유권 협약</span>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -558,84 +562,89 @@
             함께 협업해요!
             </span>
         </div>
-        <div class="team-circle-wrap">
-            <!-- 12 +  9 => 21 -->
-            <figure class="team-badge3 badge1">
-                <img src="img/김영웅선임.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge2 badge2">
-                <img src="img/김영웅선임2.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge3 badge3">
-                <img src="img/김하온전임.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge2 badge4">
-                <img src="img/박지혜과장.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge3 badge5">
-                <img src="img/백주현전임.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge2 badge6">
-                <img src="img/백주현전임2.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge2 badge7">
-                <img src="img/정영민전임.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge3 badge8">
-                <img src="img/정영민전임2.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge2 badge9">
-                <img src="img/정예찬선임.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge1 badge10">
-                <img src="img/황명옥대표님.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge2 badge11">
-                <img src="img/황신욱차장.png" class="face" alt="idrsoft 직원 사진">
-                <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
-            </figure>
-            <figure class="team-badge active-badge1"><img src="img/book.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge2"><img src="img/camera.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge3"><img src="img/heart.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge4"><img src="img/idrsoft-logo-img.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge5"><img src="img/painting.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge6"><img src="img/puzzle.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge7"><img src="img/smile.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge8"><img src="img/music.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
-            <figure class="team-badge active-badge9"><img src="img/search.png" alt="아이디알 소프트를 상징하는 로고들"></figure>    
+        <div class="team-badge-wrap">
+            <div class="team-circle-wrap">
+                <figure class="face-badge team-badge3 badge1">
+                    <img src="img/김영웅선임.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge2 badge2">
+                    <img src="img/김영웅선임2.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge face-badge team-badge3 badge3">
+                    <img src="img/김하온전임.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge2 badge4">
+                    <img src="img/박지혜과장.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge3 badge5">
+                    <img src="img/백주현전임.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge2 badge6">
+                    <img src="img/백주현전임2.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge2 badge7">
+                    <img src="img/정영민전임.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge3 badge8">
+                    <img src="img/정영민전임2.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team3.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge2 badge9">
+                    <img src="img/정예찬선임.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge1 badge10">
+                    <img src="img/황명옥대표님.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="face-badge team-badge2 badge11">
+                    <img src="img/황신욱차장.png" class="face" alt="idrsoft 직원 사진">
+                    <img src="img/explane-team2.png" class="explane-team"  alt="idrsoft직원 소개">
+                </figure>
+                <figure class="team-badge active-badge1"><img src="img/book.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge2"><img src="img/camera.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge3"><img src="img/heart.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge4"><img src="img/idrsoft-logo-img.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge5"><img src="img/painting.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge6"><img src="img/puzzle.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge7"><img src="img/smile.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge8"><img src="img/music.png" alt="아이디알 소프트를 상징하는 로고들"></figure>
+                <figure class="team-badge active-badge9"><img src="img/search.png" alt="아이디알 소프트를 상징하는 로고들"></figure>    
+            </div>
         </div>
     </section>
     <!-- team소개// -->
 
     <footer>
         <div class="footer-wrap">
-            <figure>
-                <img src="img/footer-logo.png" alt="idrsoft 로고">
-            </figure>
-            <div class="introduce-idr">
-                <p>아이디알소프트 주소 &#41; 서울 구로구 디지털로 242, 513호 (구로구, 한화비즈메트로1차)</p>
-                <dl>
-                    <dt>TEL</dt>
-                    <dd></dd>
-                    <dt>FAX</dt>
-                    <dd></dd>
-                    <dt>E-MAIL</dt>
-                    <dd></dd>
-                </dl>
+            <div class="logo-company-introducew-wrap">
+                <figure>
+                    <img src="img/footer-logo.png" alt="idrsoft 로고">
+                </figure>
+                <div class="introduce-idr">
+                    <p>아이디알소프트 주소 &#41; 서울 구로구 디지털로 242, 513호 (구로구, 한화비즈메트로1차)</p>
+                    <dl>
+                        <dt>TEL</dt>
+                        <dd></dd>
+                        <dt>FAX</dt>
+                        <dd></dd>
+                        <dt>E-MAIL</dt>
+                        <dd></dd>
+                    </dl>
+                </div>
             </div>
+            <span>Copyrights 2023 IDRSOFT CO,.LTD. All Rights Reserved</span>
         </div>
-        <span>Copyrights 2023 IDRSOFT CO,.LTD. All Rights Reserved</span>
     </footer>
 
+    <script src="js/animation.js"></script>
+    <script src="js/erase.js"></script>
 </body>
 </html>
