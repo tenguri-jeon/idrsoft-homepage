@@ -7,7 +7,11 @@
     <title>IDRSOFT</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 </head>
 <body>
     <!-- intro / main -->
@@ -39,7 +43,7 @@
                 <hr class="main-hr">
                 <h2>무한한 상상을 실현하는 기업</h2>
             </div>
-        <div class="scroll-down display">
+        <div class="scroll-down display" data-scroll>
             <span class="scroll-text" >Scroll</span>
             <div class="scroll-down-animation"></div>
         </div>
@@ -247,7 +251,7 @@
 
     <!-- op / bw -->
     <section id="solution">
-        <div class="openworks-container">
+        <div class="openworks-container scale">
             <!-- 솔루션 오픈웍스 left-bar fixed -->
             <div class="left-bar left-bar-ani">
                 <div class="solution-text-container">
@@ -277,7 +281,7 @@
             <!-- 솔루션 오픈웍스 left-bar fixed -->
             
             <!-- 솔루션 slide -->
-            <div class="solution-slide-container">
+            <div class="solution-slide-container display">
                 <h5>OPEN WORKS</h5>
                 <div class="solution-slide">
                     <ul class="solution-slde-wrap slider-container">
@@ -342,7 +346,7 @@
             <!-- 솔루션 slide// -->
         </div>
 
-        <div class="blueworks-container">
+        <div class="blueworks-container scale">
             <!-- 솔루션 오픈웍스 left-bar fixed -->
             <div class="left-bar">
                 <div class="solution-text-container">
@@ -372,8 +376,8 @@
             <!-- 솔루션 오픈웍스 left-bar fixed -->
             
             <!-- 솔루션 slide -->
-            <div class="solution-slide-container">
-                <h5>OPEN WORKS</h5>
+            <div class="solution-slide-container display">
+                <h5>BLUEWORKS</h5>
                 <div class="solution-slide">
                     <ul class="solution-slde-wrap slider-container">
                         <li>
@@ -442,17 +446,17 @@
 
     <!-- logo -->
     <section id="logo">
-        <div class="right-bar">
+        <div class="right-bar left-bar-ani">
             <div class="logo-text-wrap" data-scroll>
                 <h6>공공기관과 한국 기업들이 <br>
-                    <span class="orange">
+                    <span id="simpleUsage" class="orange">
                         IDRSOFT
                     </span>
                     와 함께하고 있습니다.
                 </h6>
             </div>
         </div>
-        <div class="logo-imgs">
+        <div class="logo-imgs display">
             <figure>
                 <img src="img/logo-group.png" alt="돌아가는 로고들">
             </figure>
@@ -467,7 +471,7 @@
         <!-- idrsoft의 년도 -->
         <div class="history-wrap">
             <div class="hisroty-text-wrap">
-                <div class="logo-number-wrap">
+                <div class="logo-number-wrap display">
                     <h3> <span class="hide">아이디알소프트 로고</span></h3>
                         <figure class="history-logo">
                             <img src="img/idrsoft-history-logo.png" alt="아이디알소프트 로고">
@@ -498,7 +502,7 @@
         <!-- idrsoft의 년도// -->
         
         <!-- 연혁 소개 슬라이드 -->
-        <div class="history-explane-container">
+        <div class="history-explane-container display">
             <div class="history-slide">
                 <ul class="hisroty-wrap">
                     <li>
@@ -510,7 +514,6 @@
                                 <span>20.02월</span>
                                 <span>제 21회 대한민국 인물대상 IT 부문 수상</span>
                             </div>
-                            <hr class="histroy-bar">
                         </div>
                     </li>
                     <li>
@@ -526,7 +529,6 @@
                                 <span>21.08월</span>
                                 <span>벤처기업인증 (혁심 성장유형)</span>
                             </div>
-                            <hr class="histroy-bar">
                         </div>
                     </li>
                     <li>
@@ -554,7 +556,7 @@
     <section id="team">
         <div class="right-bar triangle-bar">
         </div>
-        <div class="team-text-wrap">
+        <div class="team-text-wrap display">
             <h4>아이디알소프트와 함께하는 <br>
             Team을 소개합니다
             </h4>
@@ -646,5 +648,7 @@
 
     <script src="js/animation.js"></script>
     <script src="js/erase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/typying.js"></script>
 </body>
 </html>
