@@ -21,6 +21,6 @@ function intro(params) {
             $mainText[0].classList.remove('display')
             $scroll[0].classList.remove('display')
             $video.style.opacity = '0'
-        }, 8000);
+        }, 5200);
     })
 }

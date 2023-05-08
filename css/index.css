@@ -151,7 +151,7 @@ video{
 
 .earth-intro{
     animation-name: earth-ani;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-delay: 2.5s;
     opacity: 0;
     animation-fill-mode: both;
@@ -990,9 +990,6 @@ video{
 #team{
     position: relative;
     height: 100vh;
-    background-image: url(../img/team-back.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .triangle-bar{
