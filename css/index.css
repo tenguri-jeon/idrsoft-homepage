@@ -1,12 +1,14 @@
 :root{
     --orange: #F25C05;
     --idr-blue: #6B9FBF;
+    --blue: #056cf2;
     --footer-white : #ccc9c9;
     --white : #fff;
     --black:#484848;
     --black2: #8c8c8c;
     --graycolor: #cacaca;
     --footer-black:#4f4f4f;
+    --font:'Black Han Sans', sans-serif;
 }
 
 @font-face{
@@ -282,28 +284,31 @@ video{
 }
 
 .introduce-idrsoft{
-    display: flex;
-    flex-direction: column;
     position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .introduce-sub-text{
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 32px;
     text-align: center;
-    background: linear-gradient(182.22deg, #FFFFFF 1.86%, rgba(255, 255, 255, 0) 118.91%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: block;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: lighter;
+    margin-left: 18px;
 }
 
 .introduce-idrsoft h1{
     font-size: 100px;
     font-weight: bold;
     text-align: center;
-    background: linear-gradient(180.74deg, #FFFFFF 0.64%, rgba(255, 255, 255, 0) 89.2%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--white);
+    margin-top: 16px;
+}
+
+.main-blue-color{
+    color: var(--idr-blue);
+    font-weight: lighter;
+    font-family: 'Black Han Sans', sans-serif;
 }
 
 .sub-introduce-text{
@@ -318,6 +323,89 @@ video{
     font-size: 18px;
 }
 
+.introduce-img-wrap{
+    position: relative;
+}
+
+.introduce-img-wrap figure{
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: drop-shadow(0px 0px 41px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes dropShadow{
+    0%{
+        filter: drop-shadow(0px 0px 41px rgba(255, 255, 255, 0.5));
+    }
+    
+    50%{
+        filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5));
+    }
+    
+    100%{
+        filter: drop-shadow(0px 0px 41px rgba(255, 255, 255, 0.5));
+    }
+}
+
+.opacity{
+    opacity: 0;
+}
+
+.introduce-img-wrap figure:nth-child(1){
+    width: 230px;
+    height: 230px;
+    transform: translate(-321%, -180%);
+    transition: 1s;
+    animation: dropShadow 2.5s infinite both;
+}
+
+.introduce-img-wrap figure:nth-child(2){
+    width: 350px;
+    height: 350px;
+    transform: translate(-250%, 0%);
+    transition: 1s;
+    animation: dropShadow 2.5s infinite both;
+    animation-delay: 0.5s;
+}
+
+.introduce-img-wrap figure:nth-child(3) {
+    width: 170px;
+    height: 170px;
+    transform: translate(364%, -206%);
+    transition: 1s;
+    animation: dropShadow 2.5s infinite both;
+}
+
+.introduce-img-wrap figure:nth-child(4) {
+    width: 220px;
+    height: 220px;
+    transform: translate(217%, 44%);
+    transition: 1s;
+    animation: dropShadow 2.5s infinite both;
+    animation-delay: 1s;
+}
+
+.introduce-img-wrap figure:nth-child(5) {
+    width: 270px;
+    height: 270px;
+    transform: translate(220%, -40%);
+    transition: 1s;
+    animation: dropShadow 2.5s infinite both;
+    animation-delay: 1s;
+}
+
+.introduce-img-wrap figure:nth-child(6) {
+    width: 200px;
+    height: 200px;
+    transform: translate(-517%, -90%);
+    transition: 1s;
+    animation: dropShadow 2.5s infinite both;
+    animation-delay: 1s;
+}
+
 .work-of-idrsoft{
     margin-top: 900px;
     display: flex;
@@ -326,11 +414,21 @@ video{
     align-items: center;
 }
 
+.white-color{
+    color: var(--white);
+}
+
 .work-font{
     color: white;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
-    margin-top: 16px;
+}
+
+.work-company-text{
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 63px;
+    color: #acd7f2;
 }
 
 .work-font::after{
@@ -338,6 +436,7 @@ video{
     display: block;
     width: 100%;
     height: 1px;
+    margin: 0 auto;
     margin-top: 16px;
     background-color: var(--white);
 }
@@ -345,6 +444,7 @@ video{
 .orange-text{
     color: var(--orange);
     font-size: 32px;
+    font-family: var(--font);
 }
 
 .work-slide-wrap{
@@ -400,15 +500,12 @@ video{
 }
 
 .work-slide-explane{
-    background-image: url(../img/투명\(격자\).png);
-    background-repeat: no-repeat;
     width: 800px;
     height: 423px;
-    background-size: contain;
     overflow: hidden;
     z-index: 150;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
-
+    background-color: var(--white);
 }
 
 .work-slide-explane-wrap{
@@ -421,25 +518,71 @@ video{
     flex-shrink: 0;
 }
 
+.work-slide-explane-wrap li:nth-child(1){
+    background-image: url(../img/company-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.work-slide-explane-wrap li:nth-child(2){
+    background-image: url(../img/company-back2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.work-slide-explane-wrap li:nth-child(3){
+    background-image: url(../img/company-back3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.work-slide-explane-wrap li:nth-child(4){
+    background-image: url(../img/company-back4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.work-slide-explane-wrap li:nth-child(5){
+    background-image: url(../img/company-back2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 .work-explane-text-wrap{
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 135px;
+    gap: 53px;
+    padding: 130px;
     align-items: center;
-
 }
 
 .work-explane-text-wrap p{
     font-size: 32px;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
+    position: relative;
+    z-index: 10;
+}
+
+.work-explane-text-wrap p::after{
+    background-color: var(--blue);
+    opacity: 40%;
+    top: 0;
+    right: 0;
+    transform: translateY(18px);
+    display: block;
+    position: absolute;
+    border-radius: 30px;
+    content: '';
+    width: 100%;
+    height: 25px;
 }
 
 .work-explane-text-wrap span{
     color: var(--black);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 150%;
 }
 
@@ -448,7 +591,7 @@ video{
     width: 920px;
     height: 920px;
     border-radius: 50%;
-    transform: translateY(-14%);
+    transform: translateY(-36%);
     opacity: 50%;
     box-shadow: 0px 1px 10px 10px rgba(255, 255, 255, 0.25);
     z-index: 120;
@@ -491,26 +634,15 @@ video{
 }
 
 .cloud-container{
-    margin-top: 1020px;
     height: 470px;
     opacity: 50%;
 }
 
 .idrsoft-story{
-    background-image: url(../img/아이디알스토리\ 뒷배경.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1320px;
-    height: 715px;
-    position: absolute;
-    z-index: 10;
-    left: 50%;
-    bottom: 430px;
-    transform: translate(-50%, 0%);
+    margin: 0px 64px;
 }
 
 .story-wrap{
-    padding: 100px 80px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -519,6 +651,7 @@ video{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: flex-start;
 }
 
 .story-text::after{
@@ -536,25 +669,95 @@ video{
 }
 
 .idrsoft-srory-text-wrap p{
-    font-size: 32px;
+    font-size: 63px;
     font-weight: bold;
     color: var(--black);
     position: relative;
     display: inline-block;
+    font-family: var(--font);
+    font-weight: lighter;
 }
 
-.idrsoft-srory-text-wrap span{
+.story-planet{
+    z-index: 0;
+    background-image: url(../img/story-circle.png);
+    width: 1300px;
+    height: 1300px;
+    position: absolute;
+    bottom: -17%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    animation: rotate-earth;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+.story-subtitle{
     color: var(--black);
+    font-size: 18px;
     font-weight: bold;
 }
 
+.stroy-text{
+    color: var(--white);
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 63px;
+    font-weight: lighter;
+}
+
 .idrsoft-story-container-wrap{
-    width: 205px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     opacity: 0.9;
     filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
     backdrop-filter: blur(2px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
 }
+
+@keyframes storyani{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.idrsoft-story-container-wrap:nth-child(1){
+    background-image: url(../img/storyback1.png);
+    animation: storyani 2s infinite;
+}
+.idrsoft-story-container-wrap:nth-child(2){
+    background-image: url(../img/storyback2.png);
+    animation: storyani 2s infinite;
+    animation-delay: 1s;
+}
+.idrsoft-story-container-wrap:nth-child(3){
+    background-image: url(../img/storyback3.png);
+    animation: storyani 2s infinite;
+}
+.idrsoft-story-container-wrap:nth-child(4){
+    background-image: url(../img/storyback4.png);
+    animation: storyani 2s infinite;
+    animation: storyani 2s infinite;
+    animation-delay: 1s;
+}
+.idrsoft-story-container-wrap:nth-child(5){
+    background-image: url(../img/storyback5.png);
+    animation: storyani 2s infinite;
+}
+.idrsoft-story-container-wrap:nth-child(6){
+    background-image: url(../img/storyback6.png);
+    animation: storyani 2s infinite;
+    animation-delay: 1s;
+}
+
  
 .idrsoft-icon{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -564,27 +767,26 @@ video{
 }
 
 .stroy-container-wrapper{
-    display: flex;
-    justify-content: space-between;
+    margin-top: 64px;
+    width: 100%;
     height: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
 }
 
-.stroy-container-wrapper div:nth-child(odd){
-    margin-top: 85px;
+.stroy-container-wrapper div:nth-child(even){
+    margin-top: 230px;
 }
 
 .story-container{
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    padding: 20px 10px;
-    gap: 20px;
     box-sizing: border-box;
-    background-image: url(../img/idr-story-back.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
 }
 
 .story-container span{
@@ -594,9 +796,24 @@ video{
 }
 
 .story-container p{
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;   
-    font-size: 18px;
+    font-size: 24px;
+    position: relative;
+    letter-spacing: -3px;
+}
+
+.story-container p::after{
+    width: 100%;
+    height: 20px;
+    border-radius: 30px;
+    background-color: var(--blue);
+    opacity: 50%;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(10px);
 }
 
 .idrsoft-icon{
@@ -628,7 +845,7 @@ video{
     transform: translateY(100%);
 }
 
-.left-bar-ani-openworks{
+.left-to-right{
     transform: translateX(-200%);
 }
 
@@ -842,19 +1059,58 @@ video{
 }
 
 .logo-imgs figure{
+    width: 1300px;
     position: absolute;
     top: 0%;
-    right: 0%;
-    animation-name: logoani;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
-    width: 1300px;
+    right: 50%;
+    animation: logoani 25s infinite;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
 }
 
 #history{
-    padding-top: 200px;
     height: 100vh;
     position: relative;
+}
+
+#history h5{
+    color: var(--black2);
+    font-size: 63px;
+    font-family: var(--font);
+    font-weight: lighter;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 215px;
+}
+
+.idrsoft-text{
+    color: var(--idr-blue);
+    font-size: 63px;
+}
+
+.history-back{
+    background-image: url(../img/hisrory-back.png);
+    width: 100%;
+    height: 230px;
+    background-position: center;
+    background-size: auto;
+    margin-top: 24px;
+    position: relative;
+    transition: 0.5s linear;
+}
+
+.history-back::after{
+    content: '';
+    display: block;
+    background-color: var(--white);
+    width: 810px;
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 40%);
+    border-radius: 8px;
 }
 
 .logo-number-wrap{
@@ -918,11 +1174,41 @@ video{
 }
 
 .history-explane-container{
-    height: 100%;
-    display: flex;
-    align-items: center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1320px;
+    transition: 0.5s;
+}
+
+.histroy-small-back{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    flex-basis: 100%;
+    transition: 0.5s linear;
+    filter: contrast(0.4);
+}
+
+.history-contents:hover .histroy-small-back{
+    filter: contrast(1.0);
+    flex-basis: 40%;
+}
+
+li.history-contents:hover .detail-hisroty-wrap{
+    display: block;
+}
+
+.histroy-small-back p{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: var(--white);
+    font-size: 32px;
+    font-family: var(--font);
+    font-weight: lighter;
+    transition: 0.5s;
 }
 
 .histroy-bar{
@@ -932,19 +1218,55 @@ video{
 
 .hisroty-wrap{
     display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    flex-basis: 50%;
+}
+
+.detail-hisroty-wrap{
+    flex-basis: 50%;
+    padding: 16px;
+    display: none;
+    transition: 0.5s;
+}
+
+.detail-hisroty-wrap p{
+    font-size: 34px;
+    font-weight: bold;
+    display: flex;
     flex-direction: column;
-    transition: 10s linear;
-    gap: 128px;
-    transform: translateY(100%);
+    color: var(--idr-blue);
+    align-items: center;
 }
 
-.hisroty-wrap-ani{
-    transform: translateY(-100%);;
+.history-text-wrap{
+    margin-top: 16px;
 }
 
-.history-slide{
-    height: 500px;
+.history2019{
+    background-image: url(../img/history-small1.png);
+}
+
+.history2021{
+    background-image: url(../img/history-small2.png);
+}
+
+.history2022{
+    background-image: url(../img/history-small3.png);
+}
+
+.history-container{
+    width: 387px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.history-contents{
+    transition: 0.5s;
 }
 
 .history-container span{
@@ -956,12 +1278,6 @@ video{
 
 .history-container span{
     margin-bottom: 16px;
-}
-
-.history-container p{
-    margin-bottom: 16px;
-    font-size: 24px;
-    font-weight: bold;
 }
 
 .team-badge1{
@@ -1214,10 +1530,10 @@ footer{
 
 @keyframes logoani{
     0%{
-        transform: translate(-36%, 0%) rotate(0deg);
+        transform: translate(50%, 0%) rotate(0deg);
         }
         100%{
-        transform: translate(-36%, 0%) rotate(360deg);
+        transform: translate(50%, 0%) rotate(360deg);
     }
 }
 
