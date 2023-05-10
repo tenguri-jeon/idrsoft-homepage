@@ -33,8 +33,8 @@ function companyIntroduce(params) {
     }
 }
 
-scrollanimation()
-  function scrollanimation(params) {
+// scrollanimation()
+//   function scrollanimation(params) {
     
     const logoContainer = document.getElementById('logo');
     const logoTop = logoContainer.offsetTop;
@@ -50,7 +50,6 @@ scrollanimation()
     let historyContainerTop = $history.offsetTop;
     let teamContainerTop = $team.offsetTop;
     const $historyExplaneContainer = document.getElementsByClassName('history-explane-container');
-    const $histroyWrap = document.getElementsByClassName('hisroty-wrap');
     const $leftbar = document.getElementsByClassName('left-bar');
     const $solutionSliderContainer = document.getElementsByClassName('solution-slide-container');
     let openwokrsContainerTop = openwokrsContainer[0].offsetTop;
@@ -58,7 +57,8 @@ scrollanimation()
     let $idrsoftIntroduceTOP = $idrsoftIntroduce.offsetTop;
     const introduceFigure = document.getElementsByClassName('introduce-img-figure');
     const $historyBack = document.getElementsByClassName('history-back');
-
+    const introduceIdrsoft = document.getElementsByClassName('introduce-idrsoft');
+    const introduceSubTextWrap = document.getElementsByClassName('introduce-subtext-wrap');
 
     // 윈도우 객체에 'scroll' 이벤트 리스너 추가
     window.addEventListener('scroll', () => {
@@ -68,31 +68,25 @@ scrollanimation()
 
     // 우리는 아이디알 소프트 입니다 페이지
     if (scrollPosition >=  $idrsoftIntroduceTOP) {
-      introduceFigure[0].style.transform = "translate(-360%, -200%)";
-      introduceFigure[0].classList.remove("opacity");
-      introduceFigure[1].style.transform = "translate(-273%, 19%)";
-      introduceFigure[1].classList.remove('opacity')      
-      introduceFigure[2].style.transform = "translate(390%, -235%)";
-      introduceFigure[2].classList.remove('opacity')
-      introduceFigure[3].style.transform = "translate(245%, 60%)";
-      introduceFigure[3].classList.remove('opacity')   
-      introduceFigure[4].style.transform = "translate(260%, -40%)";
-      introduceFigure[4].classList.remove('opacity')   
-      introduceFigure[5].style.transform = "translate(-555%, -87%)";
-      introduceFigure[5].classList.remove('opacity')   
+      introduceIdrsoft[0].classList.remove('display')
+      setTimeout(() => {
+        introduceFigure[1].classList.remove('display');
+        introduceFigure[3].classList.remove('display');
+      }, 200);
+      introduceFigure[0].classList.remove("display");
+      introduceFigure[2].classList.remove('display');
+      introduceFigure[4].classList.remove('display');
+      setTimeout(() => {
+        introduceSubTextWrap[0].classList.remove('display');
+      }, 200);
     } else {
-      introduceFigure[0].style.transform = "translate(-320%, -180%)";
-      introduceFigure[0].classList.add ('opacity');
-      introduceFigure[1].style.transform = "translate(-250%, 0%)";
-      introduceFigure[1].classList.add ('opacity');
-      introduceFigure[2].style.transform = "translate(364%, -205%)";
-      introduceFigure[2].classList.add('opacity');
-      introduceFigure[3].style.transform = "translate(217%, 40%)";
-      introduceFigure[3].classList.add ('opacity');
-      introduceFigure[4].style.transform = "translate(240%, -40%)";
-      introduceFigure[4].classList.add ('opacity');
-      introduceFigure[5].style.transform = "translate(-517%, -90%)";
-      introduceFigure[5].classList.add ('opacity');
+      introduceIdrsoft[0].classList.add('display')
+      introduceFigure[0].classList.add ('display');
+      introduceFigure[1].classList.add ('display');
+      introduceFigure[2].classList.add('display');
+      introduceFigure[3].classList.add ('display');
+      introduceFigure[4].classList.add ('display');
+      introduceSubTextWrap[0].classList.add('display');
     }
     
     // 스크롤 위치가 openwokrsContainerTop 이상인 경우 클래스 추가
@@ -153,6 +147,6 @@ scrollanimation()
 
 
 
-}
+// }
 
 
